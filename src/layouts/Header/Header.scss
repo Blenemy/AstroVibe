@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.header {
+  min-height: 100vh;
+  background: url("../../assets/BG.png") 0 0 / cover no-repeat;
+
+  &__container {
+    min-height: 100vh;
+    padding: 20px 60px;
+  }
+}
+
+.navigation-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 150px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  &__logo-title {
+    font-size: 24px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    color: $text-grey;
+    @include body-text(14);
+  }
+}
+
+.content-header {
+  display: flex;
+
+  &__preview {
+    flex: 1 1 50%;
+  }
+
+  &__title {
+    @include typography(500, 45px, 64px);
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include typography(400, 24px);
+    margin-bottom: 50px;
+    color: $text-grey;
+  }
+
+  &__app-store-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__images {
+    flex: 1 1 50%;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+
+    &_left {
+      left: 25px;
+      top: 20px;
+    }
+
+    &_right {
+      left: 205px;
+    }
+  }
+}
