@@ -1,0 +1,47 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.daily-insights {
+  background-color: $insights-bg;
+  position: relative;
+
+  &__content {
+    padding: 120px 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 660px;
+    text-align: center;
+    @include typography(600, 45px, 64px);
+    margin-bottom: 100px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__constellation-image {
+    position: absolute;
+    z-index: 1;
+
+    &_1 {
+      top: 2%;
+      left: 4%;
+    }
+
+    &_2 {
+      bottom: 18%;
+      left: 2.5%;
+    }
+
+    &_3 {
+      bottom: 51%;
+      right: 4%;
+    }
+  }
+}
