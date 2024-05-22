@@ -52,3 +52,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .daily-insights {
+    &__content {
+      padding: 70px 15px;
+    }
+
+    &__title {
+      @include title-large("medium");
+      margin-bottom: 50px;
+    }
+  }
+}
