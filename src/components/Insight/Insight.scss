@@ -5,6 +5,10 @@
   display: flex;
   gap: 90px;
 
+  &_reversed {
+    flex-direction: row-reverse;
+  }
+
   &__title {
     margin-top: 70px;
     color: $text-grey;
@@ -14,5 +18,23 @@
   &__image {
     position: relative;
     z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .insight {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    &__title {
+      @include typography(400, 16px);
+      margin-top: 0;
+    }
+
+    &__image {
+      width: 180px;
+      height: 367px;
+    }
   }
 }

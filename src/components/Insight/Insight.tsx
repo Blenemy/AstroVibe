@@ -8,10 +8,7 @@ interface InsightProps {
 
 const Insight: React.FC<InsightProps> = ({ text, image, reversed }) => {
   return (
-    <article
-      className="insight"
-      style={{ flexDirection: reversed ? "row-reverse" : "row" }}
-    >
+    <article className={reversed ? "insight insight_reversed" : "insight"}>
       <div className="insight__title">{text}</div>
       <img src={image} className="insight__image" alt="insight" />
     </article>
