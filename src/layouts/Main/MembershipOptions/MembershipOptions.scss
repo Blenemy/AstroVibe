@@ -43,6 +43,7 @@
     th {
       padding: 16px 24px;
       background-color: #313356;
+      @include typography(400, 24px, 34px);
 
       &:first-child {
         text-align: left;
@@ -56,6 +57,10 @@
       text-align: center;
       border-top: 1px solid #333;
       border-left: 1px solid #333;
+      @include typography(400, 24px, 34px);
+      letter-spacing: 0.4px;
+      color: $text-grey;
+
       &:first-child {
         text-align: left;
       }
@@ -83,5 +88,55 @@
   &__buttons {
     display: flex;
     gap: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .membership {
+    &__content {
+      padding: 70px 8px 50px;
+    }
+
+    &__title {
+      text-align: center;
+      @include title-large("regular");
+      margin-bottom: 50px;
+    }
+
+    &__plan-comparison {
+      margin-bottom: 100px;
+    }
+  }
+
+  .plan-comparison {
+    &__thead {
+      th {
+        padding: 10px 8px;
+        @include body-text(12, "regular");
+      }
+    }
+
+    &__tbody {
+      td {
+        padding: 10px 8px;
+        @include body-text(12, "regular");
+      }
+    }
+  }
+
+  .join-us-membership {
+    &__title {
+      @include title-large("regular");
+      margin-bottom: 20px;
+    }
+
+    &__description {
+      @include typography(400, 16px, 26px);
+      margin-bottom: 40px;
+    }
+
+    &__buttons {
+      flex-direction: column;
+    }
   }
 }
