@@ -3,10 +3,17 @@
 
 .daily-insights {
   background-color: $insights-bg;
-  position: relative;
+
+  &__container {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
   &__content {
-    padding: 120px 280px;
+    padding: 120px 20px;
+    margin: 0 auto;
+    max-width: 880px;
     display: flex;
     flex-direction: column;
     align-items: center;

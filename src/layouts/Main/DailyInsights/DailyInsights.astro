@@ -1,3 +1,4 @@
+---
 import Insight from "../../../components/Insight/Insight";
 
 import ariesInsight from "../../../assets/Aries.png";
@@ -34,42 +35,39 @@ const INSIGHTS_LIST = [
     src: geminiInsight.src,
   },
 ];
+---
 
-const DailyInsights = () => {
-  return (
-    <section className="daily-insights">
-      <div className="daily-insights__content">
-        <h2 className="daily-insights__title">
-          Daily Insights and Personalized Horoscopes
-        </h2>
+<section class="daily-insights">
+  <div class="daily-insights__container">
+    <div class="daily-insights__content">
+      <h2 class="daily-insights__title">
+        Daily Insights and Personalized Horoscopes
+      </h2>
 
-        <div className="daily-insights__list">
-          {INSIGHTS_LIST.map((insight, index) => (
-            <Insight
-              text={insight.text}
-              image={insight.src}
-              reversed={index % 2 !== 0}
-            />
-          ))}
-        </div>
-        <img
-          src={constellation_1.src}
-          alt="constellation"
-          className="daily-insights__constellation-image daily-insights__constellation-image_1"
-        />
-        <img
-          src={constellation_2.src}
-          alt="constellation"
-          className="daily-insights__constellation-image daily-insights__constellation-image_2"
-        />
-        <img
-          src={constellation_3.src}
-          alt="constellation"
-          className="daily-insights__constellation-image daily-insights__constellation-image_3"
-        />
+      <div class="daily-insights__list">
+        {INSIGHTS_LIST.map((insight, index) => (
+          <Insight
+            text={insight.text}
+            image={insight.src}
+            reversed={index % 2 !== 0}
+          />
+        ))}
       </div>
-    </section>
-  );
-};
-
-export default DailyInsights;
+      <img
+        src={constellation_1.src}
+        alt="constellation"
+        class="daily-insights__constellation-image daily-insights__constellation-image_1"
+      />
+      <img
+        src={constellation_2.src}
+        alt="constellation"
+        class="daily-insights__constellation-image daily-insights__constellation-image_2"
+      />
+      <img
+        src={constellation_3.src}
+        alt="constellation"
+        class="daily-insights__constellation-image daily-insights__constellation-image_3"
+      />
+    </div>
+  </div>
+</section>
