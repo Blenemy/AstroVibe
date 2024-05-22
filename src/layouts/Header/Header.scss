@@ -2,11 +2,13 @@
 @import "../../styles/variables";
 
 .header {
-  min-height: 100vh;
+  height: 100vh;
   background: url("../../assets/header-bg.png") 0 0 / cover no-repeat;
 
   &__container {
-    min-height: 100vh;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 20px 60px;
   }
 }
@@ -65,6 +67,8 @@
   &__images {
     flex: 1 1 50%;
     position: relative;
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   &__img {
@@ -73,10 +77,14 @@
     &_left {
       left: 25px;
       top: 20px;
+      width: 239px;
+      height: 483px;
     }
 
     &_right {
       left: 205px;
+      width: 265px;
+      height: 541px;
     }
   }
 }
