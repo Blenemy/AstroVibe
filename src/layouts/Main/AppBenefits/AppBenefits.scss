@@ -1,0 +1,55 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.app-benefits {
+  background-color: $benefits-bg;
+  background-image: url("../../../assets/app-benefits-image_desktop.png");
+  background-repeat: no-repeat;
+  background-position: right -400px top 0;
+  position: relative;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 280px;
+  }
+
+  &__title {
+    @include typography(600, 48px, 64px);
+    align-self: center;
+    max-width: 660px;
+    text-align: center;
+    margin-bottom: 155px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 460px;
+    position: relative;
+    z-index: 20;
+  }
+
+  &__list-item {
+    @include typography(400, 24px, 38px);
+    color: $text-grey;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $text-grey;
+      position: absolute;
+      top: 16px;
+      left: -20px;
+    }
+  }
+}
