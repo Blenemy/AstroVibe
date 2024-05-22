@@ -1,4 +1,7 @@
 ---
+import benefitsBg_desktop from '../../../assets/app-benefits-image_desktop.png';
+import benefitsBg_tablet from '../../../assets/app-benefits-image_mobile.png';
+
 import "./AppBenefits.scss";
 ---
 
@@ -8,6 +11,18 @@ import "./AppBenefits.scss";
       <h2 class="app-benefits__title">
         Why AstroVibe Stands Out in the Galaxy
       </h2>
+
+      <div class="app-benefits__bg-image app-benefits__bg-image_desktop">
+        <img src={benefitsBg_desktop.src} alt="phones" class="app-benefits__bg-img" />
+      </div>
+
+      <div class="app-benefits__bg-image app-benefits__bg-image_tablet">
+        <img src={benefitsBg_desktop.src} alt="phones" class="app-benefits__bg-img" />
+      </div>
+
+      <div class="app-benefits__bg-image app-benefits__bg-image_mobile">
+        <img src={benefitsBg_tablet.src} alt="phones" class="app-benefits__bg-img" />
+      </div>
 
       <ul class="app-benefits__list">
         <li class="app-benefits__list-item">

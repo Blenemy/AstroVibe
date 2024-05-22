@@ -28,9 +28,6 @@
     gap: 24px;
   }
 
-  &__item {
-  }
-
   &__link {
     @include body-text(14);
     color: $text-grey;
