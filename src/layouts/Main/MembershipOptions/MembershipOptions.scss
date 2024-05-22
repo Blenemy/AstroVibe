@@ -1,0 +1,87 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.membership {
+  background-color: $insights-bg;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @include typography(500, 32px, 44px);
+    margin-bottom: 70px;
+  }
+
+  &__plan-comparison {
+    margin-bottom: 120px;
+  }
+}
+
+.plan-comparison {
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 880px;
+  width: 100%;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $benefits-bg;
+  }
+
+  &__thead {
+    th {
+      padding: 16px 24px;
+      background-color: #313356;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+
+  &__tbody {
+    td {
+      padding: 16px 24px;
+      text-align: center;
+      border-top: 1px solid #333;
+      border-left: 1px solid #333;
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.join-us-membership {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__title {
+    @include typography(600, 45px, 64px);
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include typography(400, 24px, 20px);
+    margin-bottom: 50px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 22px;
+  }
+}
