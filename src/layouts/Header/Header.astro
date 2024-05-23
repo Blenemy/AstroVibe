@@ -1,38 +1,16 @@
 ---
-import logo from "../../assets/Logo.svg";
 import firstContentImage from "../../assets/header-first-image.png";
 import secondContentImage from "../../assets/header-second-image.png";
 import Button from "../../components/Button/Button.tsx";
+import NavigationHeader from "../../components/NavigationHeader/NavigationHeader";
 
 import './Header.scss'
 
-const HEADER_LINKS = [
-  { href: "#features", label: "Features" },
-  { href: "#benefits", label: "Benefits" },
-  { href: "#membership", label: "Premium" },
-  { href: "#download", label: "Download" },
-];
 ---
 
 <header class="page__header header" id="header">
-  <div class="header__container _container">
-    <nav class="header__navigation-menu navigation-menu">
-      <div class="navigation-menu__left">
-        <img src={logo.src} alt="logo" class="navigation-menu__logo" />
-        <p class="navigation-menu__logo-title">AstroVibe</p>
-      </div>
-      <div class="navigation-menu__right">
-        <ul class="navigation-menu__list">
-          {HEADER_LINKS.map((link) => (
-            <li class="navigation-menu__item">
-              <a href={link.href} class="navigation-menu__link">{link.label}</a>
-            </li>
-          ))}
-        </ul>
-
-        <a class="navigation-menu__burger-icon" href="#menu"></a>
-      </div>
-    </nav>
+  <div class="header__container">
+    <NavigationHeader classnames="header__navigation-menu" />
     <section class="header__content content-header">
       <div class="content-header__preview">
         <h1 class="content-header__title">

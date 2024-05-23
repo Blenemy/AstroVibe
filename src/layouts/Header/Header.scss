@@ -10,37 +10,9 @@
     margin: 0 auto;
     padding: 20px 60px;
   }
-}
 
-.navigation-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 150px;
-
-  &__left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-  }
-
-  &__logo-title {
-    font-size: 24px;
-  }
-
-  &__list {
-    display: flex;
-    gap: 24px;
-  }
-
-  &__burger-icon {
-    display: none;
-  }
-
-  &__link {
-    color: $text-grey;
-    @include body-text(14);
+  &__navigation-menu {
+    margin-bottom: 150px;
   }
 }
 
@@ -96,6 +68,10 @@
   .header {
     &__container {
       padding: 20px 40px;
+    }
+
+    &__navigation-menu {
+      margin-bottom: 9px;
     }
   }
 
