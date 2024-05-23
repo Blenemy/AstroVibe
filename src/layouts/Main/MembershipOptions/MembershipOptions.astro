@@ -1,6 +1,8 @@
 ---
 import Button from '../../../components/Button/Button';
 
+import footerBg from '../../../assets/footer-bg.png';
+
 import './MembershipOptions.scss';
 ---
 
@@ -8,7 +10,6 @@ import './MembershipOptions.scss';
   <div class="membership__container">
     <div class="membership__content">
       <h3 class="membership__title">Free vs Premium Plan</h3>
-
       <div class="membership__plan-comparison plan-comparison">
         <table class="plan-comparison__table">
           <thead class="plan-comparison__thead">
@@ -67,5 +68,9 @@ import './MembershipOptions.scss';
         </div>
       </div>
     </div>
+    
+  </div>
+  <div class="membership__bg-image">
+    <img src={footerBg.src} alt="membership background" class="membership__bg-img">
   </div>
 </section>

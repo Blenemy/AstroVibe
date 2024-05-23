@@ -24,6 +24,20 @@
   &__plan-comparison {
     margin-bottom: 120px;
   }
+
+  &__bg-image {
+    position: relative;
+    padding-bottom: 54.5%;
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .plan-comparison {
@@ -91,6 +105,14 @@
   }
 }
 
+@media (max-width: 500px) {
+  .membership {
+    &__bg-image {
+      padding-bottom: 96.5%;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .membership {
     &__content {
@@ -137,6 +159,14 @@
 
     &__buttons {
       flex-direction: column;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .footer {
+    &__bg-image {
+      padding-bottom: 40.5%;
     }
   }
 }
