@@ -11,7 +11,7 @@ const NAVIGATION_MENU_LINKS = [
 
 const NavigationMenu = () => {
   return (
-    <nav className="page__menu menu" id="menu">
+    <nav className="menu" id="menu">
       <div className="container">
         <div className="menu__content">
           <div className="menu__header">
