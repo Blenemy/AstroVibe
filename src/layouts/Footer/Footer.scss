@@ -36,20 +36,8 @@
 
 @media (max-width: 500px) {
   .footer {
-    &__image {
-      padding-bottom: 96.5%;
-    }
-
     &__list {
       flex-direction: column;
-    }
-  }
-}
-
-@media (min-width: 1600px) {
-  .footer {
-    &__image {
-      padding-bottom: 40.5%;
     }
   }
 }

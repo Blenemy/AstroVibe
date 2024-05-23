@@ -1,6 +1,4 @@
 ---
-import footerBg from '../../assets/footer-bg.png';
-
 import './Footer.scss';
 
 const FOOTER_LINKS = [
@@ -9,7 +7,7 @@ const FOOTER_LINKS = [
     label: "Privacy Policy"
   }, 
   {
-    href: "/",
+    href: "/terms-of-service",
     label: "Terms of Service"
   }, 
   {
@@ -21,9 +19,6 @@ const FOOTER_LINKS = [
 
 <footer class="footer" id="footer">
   <div class="footer__container">
-    <div class="footer__image">
-      <img src={footerBg.src} alt="footer background" class="footer__img">
-    </div>
     <nav class="footer__resource-links">
       <ul class="footer__list">
         {FOOTER_LINKS.map((link) => (
