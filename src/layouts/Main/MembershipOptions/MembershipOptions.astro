@@ -1,9 +1,9 @@
 ---
-import Button from '../../../components/Button/Button';
+import Button from "../../../components/Button/Button.astro";
 
-import footerBg from '../../../assets/footer-bg.png';
+import footerBg from "../../../assets/footer-bg.png";
 
-import './MembershipOptions.scss';
+import "./MembershipOptions.scss";
 ---
 
 <section class="membership" id="membership">
@@ -63,14 +63,17 @@ import './MembershipOptions.scss';
         </p>
 
         <div class="join-us-membership__buttons">
-          <Button variant="Google Play" client:load/>
-          <Button variant="App Store" client:load/>
+          <Button variant="Google Play" />
+          <Button variant="App Store" />
         </div>
       </div>
     </div>
-    
   </div>
   <div class="membership__bg-image">
-    <img src={footerBg.src} alt="membership background" class="membership__bg-img">
+    <img
+      src={footerBg.src}
+      alt="membership background"
+      class="membership__bg-img"
+    />
   </div>
 </section>

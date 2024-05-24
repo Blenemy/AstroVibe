@@ -1,5 +1,5 @@
 ---
-import Insight from "../../../components/Insight/Insight";
+import Insight from "../../../components/Insight/Insight.astro";
 
 import ariesInsight from "../../../assets/Aries.png";
 import leoInsight from "../../../assets/Leo.png";
@@ -45,15 +45,17 @@ const INSIGHTS_LIST = [
       </h2>
 
       <div class="daily-insights__list">
-        {INSIGHTS_LIST.map((insight, index) => (
-          <Insight
-            text={insight.text}
-            image={insight.src}
-            reversed={index % 2 !== 0}
-          />
-        ))}
+        {
+          INSIGHTS_LIST.map((insight, index) => (
+            <Insight
+              text={insight.text}
+              image={insight.src}
+              reversed={index % 2 !== 0}
+            />
+          ))
+        }
       </div>
-      
+
       <img
         src={constellation_1.src}
         alt="constellation"
