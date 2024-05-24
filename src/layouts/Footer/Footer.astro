@@ -1,32 +1,34 @@
 ---
-import './Footer.scss';
-
 const FOOTER_LINKS = [
   {
     href: "/",
-    label: "Privacy Policy"
-  }, 
+    label: "Privacy Policy",
+  },
   {
     href: "/terms-of-service",
-    label: "Terms of Service"
-  }, 
+    label: "Terms of Service",
+  },
   {
     href: "/",
-    label: "Contact Us"
-  }
-]
+    label: "Contact Us",
+  },
+];
 ---
 
-<footer class="footer" id="footer">
-  <div class="footer__container">
-    <nav class="footer__resource-links">
-      <ul class="footer__list">
-        {FOOTER_LINKS.map((link) => (
-          <li class="footer__item">
-            <a href={link.href} class="footer__link">{link.label}</a>
+<footer id="footer">
+  <nav class="footer__resource-links bg-benefits-bg">
+    <ul
+      class="flex flex-col py-[70px] items-center justify-center gap-6 md:flex-row"
+    >
+      {
+        FOOTER_LINKS.map((link) => (
+          <li>
+            <a href={link.href} class="text-text-grey text-14">
+              {link.label}
+            </a>
           </li>
-        ))}
-      </ul>
-    </nav>
-  </div>
+        ))
+      }
+    </ul>
+  </nav>
 </footer>
