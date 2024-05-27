@@ -3,92 +3,110 @@ import NavigationHeader from "../components/NavigationHeader/NavigationHeader.as
 import Footer from "../layouts/Footer/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import NavigationMenu from "../layouts/NavigationMenu/NavigationMenu.astro";
-
-import "./terms-of-service.scss";
 ---
 
 <Layout title="AstroVibe">
-  <div class="terms-of-service-page" id="TOS">
-    <div class="terms-of-service-page__container">
-      <div class="terms-of-service-page__content">
-        <NavigationHeader
-          classnames="terms-of-service-page__navigation-header"
-        />
+  <div class="bg-insights-bg scroll-smooth overflow-x-hidden" id="TOS">
+    <div class="max-w-cw-1440 mx-auto my-0">
+      <div class="px-4 pb-[70px] md:pb-[120px] md:py-5 md:px-[60px]">
+        <NavigationHeader classnames="mb-[70px] md:mb-[120px]" />
         <NavigationMenu />
-        <main class="terms-of-service-page__main-content">
-          <h1 class="terms-of-service-page__title">Privacy Policy</h1>
-          <p class="terms-of-service-page__date">
+        <main class="flex flex-col gap-6">
+          <h1 class="text-[45px] leading-[64px] font-semibold">
+            Privacy Policy
+          </h1>
+          <p class="text-tos-text-color text-14 leading-24">
             Effective Date: April 10th, 2024
           </p>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Sensortronic Ltd.</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">Sensortronic Ltd.</h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               is committed to protecting your privacy. This Privacy Policy
               explains how your personal information is collected, used, and
               disclosed by AstroVibe App.
             </p>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Information Collection</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">
+              Information Collection
+            </h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               We collect information that you provide directly to us when you
               use our app. The types of personal information we collect include:
             </p>
 
-            <ul class="article-tos__list">
-              <li class="article-tos__list-item">
+            <ul class="flex flex-col gap-3 pl-5">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 Phone Number: Used for account registration, verification, and
                 communication purposes.
               </li>
-              <li class="article-tos__list-item">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 Name (Alias): You may choose to provide a pseudonym instead of
                 your real name for your user profile.
               </li>
-              <li class="article-tos__list-item">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 Date and Time of Birth: Used to calculate your horoscope sign.
               </li>
             </ul>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Use of Information</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">Use of Information</h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               We use the information we collect for several purposes, including:
             </p>
 
-            <ul class="article-tos__list">
-              <li class="article-tos__list-item">
+            <ul class="flex flex-col gap-3 pl-5">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 To create and manage your account.
               </li>
-              <li class="article-tos__list-item">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 To communicate with you about our services, including
                 verification messages and important updates.
               </li>
-              <li class="article-tos__list-item">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 To enhance our app's functionality and user personalization.
               </li>
             </ul>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Sharing of Information</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">
+              Sharing of Information
+            </h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               We do not share your personal information with third parties
               except in the following cases:
             </p>
 
-            <ul class="article-tos__list">
-              <li class="article-tos__list-item">
+            <ul class="flex flex-col gap-3 pl-5">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 If required by law, such as to comply with a subpoena or similar
                 legal process.
               </li>
-              <li class="article-tos__list-item">
+              <li
+                class="text-tos-text-color relative text-14 font-medium leading-20 before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:top-2 before:-left-5"
+              >
                 When we believe in good faith that disclosure is necessary to
                 protect our rights, your safety, or the safety of others,
                 investigate fraud, or respond to a government request.
@@ -96,30 +114,32 @@ import "./terms-of-service.scss";
             </ul>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Security</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">Security</h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               We take reasonable measures to help protect information about you
               from loss, theft, misuse, and unauthorized access, disclosure,
               alteration, and destruction.
             </p>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Your Privacy Rights</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">Your Privacy Rights</h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               You have the right to delete your personal information at any time
               by deleting your application account. This process is
               irreversible.
             </p>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Changes to This Policy</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">
+              Changes to This Policy
+            </h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               We may update this Privacy Policy from time to time. If we make
               material changes, we will notify you by revising the date at the
               top of the policy and, in some cases, we may provide you with
@@ -128,13 +148,12 @@ import "./terms-of-service.scss";
             </p>
           </article>
 
-          <article class="terms-of-service-page__article article-tos">
-            <h2 class="article-tos__title">Contact Us</h2>
+          <article class="flex flex-col gap-4">
+            <h2 class="text-16 font-medium leading-24">Contact Us</h2>
 
-            <p class="article-tos__paragraph">
+            <p class="text-tos-text-color text-14 leading-20">
               If you have any questions about this Privacy Policy, please
-              contact us at <span class="article-tos__email"
-                >hello@sensortronic.net</span
+              contact us at <span class="underline">hello@sensortronic.net</span
               >.
             </p>
           </article>
