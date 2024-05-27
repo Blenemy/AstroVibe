@@ -23,8 +23,9 @@ module.exports = {
       },
       screens: {
         "cs-500": "500px",
-        "cs-1440": "1440px",
         "cs-1150": "1150px",
+        "cs-1440": "1440px",
+        "cs-1600": "1600px",
       },
       fontSize: {
         12: "12px",
