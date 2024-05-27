@@ -22,6 +22,7 @@ module.exports = {
         "semi-bold": 600,
       },
       screens: {
+        "cs-500": "500px",
         "cs-1440": "1440px",
         "cs-1150": "1150px",
       },

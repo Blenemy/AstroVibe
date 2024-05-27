@@ -1,42 +1,60 @@
 ---
-import benefitsBg_desktop from '../../../assets/app-benefits-image_desktop.png';
-import benefitsBg_tablet from '../../../assets/app-benefits-image_mobile.png';
-
-import "./AppBenefits.scss";
+import benefitsBg_desktop from "../../../assets/app-benefits-image_desktop.png";
+import benefitsBg_tablet from "../../../assets/app-benefits-image_mobile.png";
 ---
 
-<section class="app-benefits" id="benefits">
-  <div class="app-benefits__container">
-    <div class="app-benefits__content">
-      <h2 class="app-benefits__title">
+<section class="bg-benefits-bg relative" id="benefits">
+  <div class="max-w-cw-1440 mx-auto my-0">
+    <div
+      class="pb-[50px] cs-500:pb-[60px] justify-center items-center flex flex-col cs-1440:py-[100px] cs-1440:px-[280px] cs-1440:relative"
+    >
+      <h2
+        class="text-22 leading-28 text-center cs-500:text-[30px] cs-500:leading-[36px] font-semibold absolute cs-500:mb-0 top-[35px] px-[10px] py-0 cs-1440:text-5xl cs-1440:leading-[64px] cs-1440:font-semibold cs-1440:self-center cs-1440:max-w-[660px] cs-1440:text-center cs-1440:mb-[155px] cs-1440:relative cs-1440:top-0 cs-1440:px-0"
+      >
         Why AstroVibe Stands Out in the Galaxy
       </h2>
 
-      <div class="app-benefits__bg-image app-benefits__bg-image_desktop">
-        <img src={benefitsBg_desktop.src} alt="phones" class="app-benefits__bg-img" />
+      <div
+        class="relative hidden cs-1440:block cs-1440:absolute cs-1440:top-0 cs-1440:right-[-400px]"
+      >
+        <img src={benefitsBg_desktop.src} alt="phones" />
       </div>
 
-      <div class="app-benefits__bg-image app-benefits__bg-image_tablet">
-        <img src={benefitsBg_desktop.src} alt="phones" class="app-benefits__bg-img" />
+      <div class="relative hidden cs-500:block cs-500:w-full cs-1440:hidden">
+        <img
+          src={benefitsBg_desktop.src}
+          alt="phones"
+          class="cs-500:object-cover cs-500:w-full"
+        />
       </div>
 
-      <div class="app-benefits__bg-image app-benefits__bg-image_mobile">
-        <img src={benefitsBg_tablet.src} alt="phones" class="app-benefits__bg-img" />
+      <div class="relative block w-full cs-500:hidden">
+        <img src={benefitsBg_tablet.src} alt="phones" class="w-full" />
       </div>
 
-      <ul class="app-benefits__list">
-        <li class="app-benefits__list-item">
+      <ul
+        class="px-[30px] cs-500:px-5 flex flex-col gap-[30px] max-w-[460px] relative z-20 cs-1440:self-start"
+      >
+        <li
+          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
+        >
           Deep personalization for a unique celestial guide.
         </li>
-        <li class="app-benefits__list-item">
+        <li
+          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
+        >
           Insightful compatibility checks to guide your relationships.
         </li>
-        <li class="app-benefits__list-item">
+        <li
+          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
+        >
           Elegant, user-friendly app design for an immersive experience.
         </li>
-        <li class="app-benefits__list-item">
-          Free access to daily readings, with premium features for those
-          seeking a deeper connection.
+        <li
+          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
+        >
+          Free access to daily readings, with premium features for those seeking
+          a deeper connection.
         </li>
       </ul>
     </div>
