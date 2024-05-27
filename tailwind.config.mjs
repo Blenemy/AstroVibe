@@ -4,8 +4,23 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      backgroundImage: {
+        close: "url('/src/assets/close.svg')",
+      },
       maxWidth: {
         "cw-1440": "1440px",
+      },
+      transitionProperty: {
+        all: "all",
+      },
+      transitionDuration: {
+        300: "300ms",
+      },
+      transitionTimingFunction: {
+        linear: "linear",
+      },
+      transitionDelay: {
+        0: "0ms",
       },
       colors: {
         "text-grey": "#cecfd7",
@@ -48,5 +63,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".custom-transition": {
+          transition: "all 0.3s linear 0s",
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };
