@@ -11,8 +11,6 @@ import constellation_1 from "../../../assets/Constellation 1.png";
 import constellation_2 from "../../../assets/Constellation 2.png";
 import constellation_3 from "../../../assets/Constellation 3.png";
 
-import "./DailyInsights.scss";
-
 const INSIGHTS_LIST = [
   {
     text: "Begin every day with a celestial roadmap. AstroVibe offers you free daily horoscope readings, preparing you for what’s to come in love, work, and fortune.",
@@ -37,14 +35,18 @@ const INSIGHTS_LIST = [
 ];
 ---
 
-<section class="daily-insights" id="features">
-  <div class="daily-insights__container">
-    <div class="daily-insights__content">
-      <h2 class="daily-insights__title">
+<section class="bg-insights-bg" id="features">
+  <div class="relative max-w-cw-1440 my-0 mx-auto">
+    <div
+      class="px-4 py-[70px] md:px-5 md:py-[120px] mx-auto my-0 max-w-[880px] flex items-center flex-col"
+    >
+      <h2
+        class="mb-12 text-22 leading-28 tracking-0.1 font-medium md:max-w-[660px] text-center md:mb-24 md:text-[45px] md:leading-[64px] md:font-semibold"
+      >
         Daily Insights and Personalized Horoscopes
       </h2>
 
-      <div class="daily-insights__list">
+      <div class="daily-insights__list flex flex-col gap-[10px]">
         {
           INSIGHTS_LIST.map((insight, index) => (
             <Insight
@@ -59,17 +61,17 @@ const INSIGHTS_LIST = [
       <img
         src={constellation_1.src}
         alt="constellation"
-        class="daily-insights__constellation-image daily-insights__constellation-image_1"
+        class="absolute z-[1] top-[2%] left-[4%]"
       />
       <img
         src={constellation_2.src}
         alt="constellation"
-        class="daily-insights__constellation-image daily-insights__constellation-image_2"
+        class="absolute z-[1] bottom-[18%] left-[2.5%]"
       />
       <img
         src={constellation_3.src}
         alt="constellation"
-        class="daily-insights__constellation-image daily-insights__constellation-image_3"
+        class="absolute z-[1] bottom-[51%] right-[4%]"
       />
     </div>
   </div>
