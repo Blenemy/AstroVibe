@@ -1,6 +1,15 @@
 ---
 import benefitsBg_desktop from "../../../assets/app-benefits-image_desktop.png";
 import benefitsBg_tablet from "../../../assets/app-benefits-image_mobile.png";
+import TypographyTitle from "../../../components/TypographyTitle/TypographyTitle.astro";
+import BenefitItem from "./BenefitItem.astro";
+
+const BENEFITS_LIST = [
+  "Deep personalization for a unique celestial guide.",
+  "Insightful compatibility checks to guide your relationships.",
+  "Elegant, user-friendly app design for an immersive experience.",
+  "Free access to daily readings, with premium features for those seeking a deeper connection.",
+];
 ---
 
 <section class="bg-benefits-bg relative" id="benefits">
@@ -8,11 +17,12 @@ import benefitsBg_tablet from "../../../assets/app-benefits-image_mobile.png";
     <div
       class="pb-[50px] cs-500:pb-[60px] justify-center items-center flex flex-col cs-1440:py-[100px] cs-1440:px-[280px] cs-1440:relative"
     >
-      <h2
-        class="text-22 leading-28 text-center cs-500:text-[30px] cs-500:leading-[36px] font-semibold absolute cs-500:mb-0 top-[35px] px-[10px] py-0 cs-1440:text-5xl cs-1440:leading-[64px] cs-1440:font-semibold cs-1440:self-center cs-1440:max-w-[660px] cs-1440:text-center cs-1440:mb-[155px] cs-1440:relative cs-1440:top-0 cs-1440:px-0"
+      <TypographyTitle
+        tag="h2"
+        className="text-center absolute top-[70px] md:top-[35px] px-[10px] py-0 cs-1440:self-center cs-1440:max-w-[660px] cs-1440:text-center cs-1440:mb-[155px] cs-1440:relative cs-1440:top-0 cs-1440:px-0"
       >
         Why AstroVibe Stands Out in the Galaxy
-      </h2>
+      </TypographyTitle>
 
       <div
         class="relative hidden cs-1440:block cs-1440:absolute cs-1440:top-0 cs-1440:right-[-400px]"
@@ -35,27 +45,7 @@ import benefitsBg_tablet from "../../../assets/app-benefits-image_mobile.png";
       <ul
         class="px-[30px] cs-500:px-5 flex flex-col gap-[30px] max-w-[460px] relative z-20 cs-1440:self-start"
       >
-        <li
-          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
-        >
-          Deep personalization for a unique celestial guide.
-        </li>
-        <li
-          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
-        >
-          Insightful compatibility checks to guide your relationships.
-        </li>
-        <li
-          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
-        >
-          Elegant, user-friendly app design for an immersive experience.
-        </li>
-        <li
-          class="relative text-16 leading-[26px] before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-[50%] before:bg-text-grey before:absolute before:-left-5 text-text-grey cs-1440:text-[24px] cs-1440:leading-[38px]"
-        >
-          Free access to daily readings, with premium features for those seeking
-          a deeper connection.
-        </li>
+        {BENEFITS_LIST.map((benefit) => <BenefitItem text={benefit} />)}
       </ul>
     </div>
   </div>
