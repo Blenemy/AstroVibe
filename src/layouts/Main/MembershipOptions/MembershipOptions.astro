@@ -4,6 +4,19 @@ import Button from "../../../components/Button/Button.astro";
 import footerBg from "../../../assets/footer-bg.png";
 import TableHealCell from "./TableHealCell.astro";
 import TableCell from "./TableCell.astro";
+import TypographyTitle from "../../../components/TypographyTitle/TypographyTitle.astro";
+
+import checked from "../../../assets/check.svg";
+import TableRow from "../../../components/TableRow/TableRow.astro";
+
+const FEATURES_LIST = [
+  { feature: "All 12 signs’ characteristics", free: true, premium: true },
+  { feature: "Daily Horoscope", free: true, premium: true },
+  { feature: "Compatibility", free: true, premium: true },
+  { feature: "Personalized Daily Horoscope", free: false, premium: true },
+  { feature: "Personalized Compatibility", free: false, premium: true },
+  { feature: "Add Free Access to All Content", free: false, premium: true },
+];
 ---
 
 <section class="bg-insights-bg" id="membership">
@@ -12,10 +25,11 @@ import TableCell from "./TableCell.astro";
       class="pb-[50px] pt-[70px] px-2 md:px-5 md:py-[100px] flex flex-col items-center"
     >
       <h3
-        class="text-center mb-[50px] text-22 leading-28 font-medium md:text-[32px] md:leading-[44px] md:mb-[70px] md:font-semibold"
+        class="text-center mb-[50px] text-22 leading-28 font-medium md:text-[32px] md:leading-[44px] md:mb-[70px]"
       >
         Free vs Premium Plan
       </h3>
+
       <div
         class="text-white rounded-lg overflow-hidden max-w-[880px] w-full mb-[100px] md:mb-[120px]"
       >
@@ -28,36 +42,15 @@ import TableCell from "./TableCell.astro";
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <TableCell firstChild>All 12 signs’ characteristics</TableCell>
-              <TableCell>✔️</TableCell>
-              <TableCell>✔️</TableCell>
-            </tr>
-            <tr>
-              <TableCell firstChild>Daily Horoscope</TableCell>
-              <TableCell>✔️</TableCell>
-              <TableCell>✔️</TableCell>
-            </tr>
-            <tr>
-              <TableCell firstChild>Compatibility</TableCell>
-              <TableCell>✔️</TableCell>
-              <TableCell>✔️</TableCell>
-            </tr>
-            <tr>
-              <TableCell firstChild>Personalized Daily Horoscope</TableCell>
-              <TableCell>✔️</TableCell>
-              <TableCell>✔️</TableCell>
-            </tr>
-            <tr>
-              <TableCell firstChild>Personalized Compatibility</TableCell>
-              <TableCell>✔️</TableCell>
-              <TableCell>✔️</TableCell>
-            </tr>
-            <tr>
-              <TableCell firstChild>Add Free Access to All Content</TableCell>
-              <TableCell>✔️</TableCell>
-              <TableCell>✔️</TableCell>
-            </tr>
+            {
+              FEATURES_LIST.map((feature) => (
+                <TableRow
+                  feature={feature.feature}
+                  free={feature.free}
+                  premium={feature.premium}
+                />
+              ))
+            }
           </tbody>
         </table>
       </div>
@@ -66,12 +59,11 @@ import TableCell from "./TableCell.astro";
         class="flex flex-col items-center justify-center text-center"
         id="download"
       >
-        <h3
-          class="mb-5 text-[22px] font-semibold leading-28 md:text-[45px] md:leading-[64px] md:mb-[30px]"
-        >
+        <TypographyTitle tag="h2" className="mb-5 md:mb-[30px]">
           Join a community of star seekers.
-        </h3>
-        <p class="mb-10 text-16 leading-24 md:text-2xl md:mb-12">
+        </TypographyTitle>
+
+        <p class="mb-10 text-16 leading-26 md:text-2xl md:mb-12 text-text-grey">
           Download AstroVibe and let the cosmos guide your journey.
         </p>
 
