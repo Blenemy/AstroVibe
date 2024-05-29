@@ -1,13 +1,10 @@
 ---
-import Button from "../../../components/Button/Button.astro";
+import TableHeadCell from "./TableHeadCell.astro";
+import TableRow from "@components/TableRow/TableRow.astro";
+import TypographyTitle from "@components/TypographyTitle/TypographyTitle.astro";
+import Button from "@components/Button/Button.astro";
 
-import footerBg from "../../../assets/footer-bg.png";
-import TableHealCell from "./TableHealCell.astro";
-import TableCell from "./TableCell.astro";
-import TypographyTitle from "../../../components/TypographyTitle/TypographyTitle.astro";
-
-import checked from "../../../assets/check.svg";
-import TableRow from "../../../components/TableRow/TableRow.astro";
+import footerBg from "@assets/footer-bg.png";
 
 const FEATURES_LIST = [
   { feature: "All 12 signs’ characteristics", free: true, premium: true },
@@ -36,9 +33,13 @@ const FEATURES_LIST = [
         <table class="w-full border-collapse bg-benefits-bg">
           <thead>
             <tr>
-              <TableHealCell firstChild>Feature</TableHealCell>
-              <TableHealCell>Free</TableHealCell>
-              <TableHealCell>Premium</TableHealCell>
+              <TableHeadCell>Feature</TableHeadCell>
+              <TableHeadCell className="border-l text-center"
+                >Free</TableHeadCell
+              >
+              <TableHeadCell className="border-l text-center"
+                >Premium</TableHeadCell
+              >
             </tr>
           </thead>
           <tbody>
