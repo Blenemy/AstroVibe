@@ -9,7 +9,10 @@ const Tag = tag || "h1";
 ---
 
 <Tag
-  class={`text-22 leading-28 font-medium md:text-[45px] md:leading-[64px] ${className ? className : ""}`}
+  class:list={[
+    `text-22 leading-28 font-medium md:text-[45px] md:leading-[64px]`,
+    className,
+  ]}
 >
   <slot />
 </Tag>
