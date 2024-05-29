@@ -1,10 +1,10 @@
 ---
-import NavigationHeader from "../components/NavigationHeader/NavigationHeader.astro";
-import PrivacyArticle from "../components/PrivacyArticle/PrivacyArticle.astro";
-import TypographyTitle from "../components/TypographyTitle/TypographyTitle.astro";
-import Footer from "../layouts/Footer/Footer.astro";
-import Layout from "../layouts/Layout.astro";
-import NavigationMenu from "../layouts/NavigationMenu/NavigationMenu.astro";
+import NavigationHeader from "@components/NavigationHeader/NavigationHeader.astro";
+import PrivacyArticle from "@components/PrivacyArticle/PrivacyArticle.astro";
+import TypographyTitle from "@components/TypographyTitle/TypographyTitle.astro";
+import Footer from "@layouts/Footer/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import NavigationMenu from "@layouts/NavigationMenu/NavigationMenu.astro";
 
 const ARTICLES_LIST = [
   {
@@ -77,7 +77,7 @@ const ARTICLES_LIST = [
   <div class="bg-insights-bg scroll-smooth overflow-x-hidden" id="TOS">
     <div class="max-w-cw-1440 mx-auto my-0">
       <div class="px-4 pb-[70px] md:pb-[120px] md:py-5 md:px-[60px]">
-        <NavigationHeader classnames="mb-[70px] md:mb-[120px]" />
+        <NavigationHeader className="mb-[70px] md:mb-[120px]" />
         <NavigationMenu />
         <main class="flex flex-col gap-6">
           <TypographyTitle> Privacy Policy </TypographyTitle>
