@@ -1,10 +1,10 @@
 ---
 interface Props {
-  className?: string;
+  class?: string;
   tag?: "h1" | "h2";
 }
 
-const { className, tag }: Props = Astro.props;
+const { class: className, tag }: Props = Astro.props;
 const Tag = tag || "h1";
 ---
 

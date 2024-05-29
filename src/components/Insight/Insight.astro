@@ -1,5 +1,11 @@
 ---
-const { text, image, reversed } = Astro.props;
+interface Props {
+  text: string;
+  image: string;
+  reversed: boolean;
+}
+
+const { text, image, reversed }: Props = Astro.props;
 ---
 
 <article

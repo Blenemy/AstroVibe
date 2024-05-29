@@ -2,7 +2,11 @@
 import logo from "@assets/Logo.svg";
 import menu from "@assets/menu.svg";
 
-const { className } = Astro.props;
+interface Props {
+  class: string;
+}
+
+const { class: className }: Props = Astro.props;
 
 const HEADER_LINKS = [
   { href: "#features", label: "Features" },
