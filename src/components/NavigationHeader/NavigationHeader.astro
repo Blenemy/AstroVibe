@@ -1,8 +1,8 @@
 ---
-import logo from "../../assets/Logo.svg";
-import menu from "../../assets/menu.svg";
+import logo from "@assets/Logo.svg";
+import menu from "@assets/menu.svg";
 
-const { classnames } = Astro.props;
+const { className } = Astro.props;
 
 const HEADER_LINKS = [
   { href: "#features", label: "Features" },
@@ -12,9 +12,7 @@ const HEADER_LINKS = [
 ];
 ---
 
-<nav
-  class=`flex justify-between items-center w-full ${classnames ? classnames : ""}`
->
+<nav class:list={["flex justify-between items-center w-full", className]}>
   <div class="flex items-center justify-center gap-2">
     <img src={logo.src} alt="logo" class="h-auto" />
     <p class="text-sm md:text-2xl">AstroVibe</p>
